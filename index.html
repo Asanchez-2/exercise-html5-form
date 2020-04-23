@@ -8,10 +8,11 @@
     <title>Formulario Web</title>
 </head>
 <body>
-    <div class="container border p-0">
-        <nav class="navbar navbar-light bg-light">
-        <span class="navbar-brand mx-0 p-0 h1">Payment Form example</span>
-        </nav>
+<div class="container">
+    <div class="card">
+        <div class="card-header pt-0 pb-0 pl-2">
+        <h2>Payment form example</h2>
+        </div>
         <fieldset disabled>
         <div class="form-row mx-2 my-3">
             <div class="col" for="disabledTextInput"><input type="text" class="form-control" id="exampleFormCardNumber" placeholder="Some fields are missings">
@@ -43,25 +44,57 @@
                 </div>
             </div>
             <div class="form-row mx-2">
-                <div class="col mb-3" for="exampleFormCardNumber">
+                <div class="col mb-3" for="exampleFormFirstName">
                   First Name 
                     <input type="text" class="form-control" id="validationCustom04" required="required">
                     <div class="valid-feedback">
                         Looks good!
                     </div>
                 </div>
-                <div class="col pl-3 mb-3" for="exampleFormCVC">
+                <div class="col pl-3 mb-3" for="exampleFormLastName">
                   Last Name 
                     <input type="text" class="form-control" id="validationCustom05" required="required">
                     <div class="valid-feedback">
                         Looks good!
                     </div>
                 </div>  
-            </div>  
+            </div>
+            <div class="form-row mx-2">
+                <div class="col mb-3" for="exampleFormCity">
+                  City
+                    <input type="text" class="form-control" id="validationCustom05" required="required">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col pl-3 mb-3" for="exampleFormState">
+                  State
+                    <select class="form-control" id="exampleFormControlSelect1"required="required">
+                        <option>City 1</option>
+                        <option>City 2</option>
+                        <option>City 3</option>
+                        <option>City 4</option>
+                        <option>City 5</option>
+                    </select>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                    <div class="col pl-3 mb-3" for="exampleFormPostalCode">
+                  Postal Code
+                    <input type="text" class="form-control" id="validationCustom07" required="required">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>   
+            </div>
+            <div class="card-footer text-right">
                 <button class="btn btn-primary" type="submit">Send</button>
                 <button class="btn btn-secondary" type="submit">Cancel</button>
+            </div>
         </form>        
     </div>
+</div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
