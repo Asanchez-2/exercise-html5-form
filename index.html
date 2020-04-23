@@ -8,21 +8,82 @@
     <title>Formulario Web</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container border p-0">
         <nav class="navbar navbar-light bg-light">
-        <span class="navbar-brand mb-0 h1">Payment Form example</span>
+        <span class="navbar-brand mx-0 p-0 h1">Payment Form example</span>
         </nav>
-        <div class="form-row">
-            <div class="col" for="exampleFormCardNumber">Card #<input type="text" class="form-control" id="exampleFormCardNumber" placeholder="XXXXXXXXXXXXXXXX" required="required">
+        <fieldset disabled>
+        <div class="form-row mx-2 my-3">
+            <div class="col" for="disabledTextInput"><input type="text" class="form-control" id="exampleFormCardNumber" placeholder="Some fields are missings">
             </div>
-            <div class="col" for="exampleFormCVC">CVC #<input type="text" class="form-control" id="exampleFormCVC" placeholder="0000" required="required">
-            </div>    
-            <div class="col" for="exampleFormAmount">Amount<input type="text" class="form-control" id="exampleFormAmount" placeholder="Amount" required="required">
+        </div>
+        </fieldset>
+        <form class="needs-validation" novalidate>
+            <div class="form-row mx-2">
+                <div class="col-5 mb-3" for="exampleFormCardNumber">
+                  Card #
+                    <input type="text" class="form-control" id="validationCustom01" placeholder="XXXXXXXXXXXXXXXX" value="XXXXXXXXXXXXXXXX" required="required">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-3 pl-3 mb-3" for="exampleFormCVC">
+                  CVC #
+                    <input type="text" class="form-control" id="validationCustom02" placeholder="0000"  value="0000" required="required">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>    
+                <div class="col pl-3 mb-3" for="exampleFormAmount">
+                  Amount
+                    <input type="text" class="form-control" id="validationCustom03" placeholder="Amount"  value="Amount" required="required">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
             </div>
-        </div>        
+            <div class="form-row mx-2">
+                <div class="col mb-3" for="exampleFormCardNumber">
+                  First Name 
+                    <input type="text" class="form-control" id="validationCustom04" required="required">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col pl-3 mb-3" for="exampleFormCVC">
+                  Last Name 
+                    <input type="text" class="form-control" id="validationCustom05" required="required">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>  
+            </div>  
+                <button class="btn btn-primary" type="submit">Send</button>
+                <button class="btn btn-secondary" type="submit">Cancel</button>
+        </form>        
     </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
 </body>
 </html>
