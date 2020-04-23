@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Formulario Web</title>
 </head>
 <body>
@@ -80,7 +81,7 @@
                         Looks good!
                     </div>
                 </div>
-                    <div class="col pl-3 mb-3" for="exampleFormPostalCode">
+                <div class="col pl-3 mb-3" for="exampleFormPostalCode">
                   Postal Code
                     <input type="text" class="form-control" id="validationCustom07" required="required">
                     <div class="valid-feedback">
@@ -88,7 +89,32 @@
                     </div>
                 </div>   
             </div>
-            <div class="card-footer text-right">
+            <div class="form-row inline">
+                <div class="col pl-3 mb-3" for="exampleFormPaymentsMethods">
+                  We accept
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadioInline1"><i class="fa fa-cc-visa"></i></label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadioInline2"><i class="fa fa-cc-mastercard"></i></label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadioInline2"><i class="fa fa-cc-amex"></i></label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadioInline2"><i class="fa fa-cc-paypal"></i></label>
+                    </div>
+                 <div class="col pl-3 mb-3" for="exampleFormTextArea">
+                        <label for="exampleFormControlTextarea1">Message</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                 </div>
+                </div>
+            </div>
+            <div class="card-footer text-right p-2">
                 <button class="btn btn-primary" type="submit">Send</button>
                 <button class="btn btn-secondary" type="submit">Cancel</button>
             </div>
